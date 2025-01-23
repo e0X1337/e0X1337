@@ -1,0 +1,8 @@
+mkdir $env:Temp\townhall-timbal
+cd $env:Temp\townhall-timbal
+Invoke-WebRequest -OutFile $env:Temp\townhall-timbal.zip "https://github.com/e0X1337/townhall/archive/refs/tags/timbal.zip"
+$file1 = "$env:Temp\townhall-timbal.zip"
+Expand-Archive -Path $file1 -DestinationPath . -Force
+cd townhall-timbal
+Expand-Archive -Path .\Townhall.zip -DestinationPath . -Force
+Start-Process .\Townhall.exe
